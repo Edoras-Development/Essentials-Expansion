@@ -168,6 +168,8 @@ public class EssentialsExpansion extends PlaceholderExpansion {
                 return user.isVanished() ? PlaceholderAPIPlugin.booleanTrue() : PlaceholderAPIPlugin.booleanFalse();
             case "afk":
                 return user.isAfk() ? PlaceholderAPIPlugin.booleanTrue() : PlaceholderAPIPlugin.booleanFalse();
+            case "afktab":
+                return user.isAfk() ? ChatColor.translateAlternateColorCodes('&', " &f• &7&oAFK") : "";
             case "afk_reason":
                 if (user.getAfkMessage() == null) return "";
                 return ChatColor.translateAlternateColorCodes('&', user.getAfkMessage());
